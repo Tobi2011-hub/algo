@@ -1,5 +1,5 @@
 function analyzetext(text) {
- let sentence = prompt("Enter a sentence ending with a point:");
+  let sentence = text.trim();
  let lengthCount = 0;
 let wordCount = 0;
 let vowelCount = 0;
@@ -19,11 +19,10 @@ for (let i = 0; i < sentence.length; i++) {
     break;
   }
 }
-console.log("Length of the sentence: " + lengthCount);
-console.log("Number of words in the sentence: " + wordCount);
-console.log("Number of vowels in the sentence: " + vowelCount);
-
-alert("Length of the sentence: " + lengthCount + 
-      "\nNumber of words in the sentence: " + wordCount + 
-      "\nNumber of vowels in the sentence: " + vowelCount);
+return {
+  length: lengthCount,
+  words: wordCount,
+  vowels: vowelCount
 }
+}
+console.log(analyzetext("Hello, all 25 of my dogs are cute"));
